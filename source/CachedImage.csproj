@@ -1,27 +1,34 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    <TargetFrameworks>net45;netcoreapp3.1;net5.0-windows</TargetFrameworks>
-    <Version>0.1.0.0</Version>
+    <TargetFrameworks>net48;net6.0-windows</TargetFrameworks>
+    <Version>1.0.0.0</Version>
     <Authors>floydpink</Authors>
     <Company>floydpink</Company>
     <Product>CachedImage</Product>
     <PackageId>CachedImage</PackageId>
-    <AssemblyVersion>0.1.0.0</AssemblyVersion>
-    <FileVersion>0.1.0.0</FileVersion>
-    <NeutralLanguage>en</NeutralLanguage>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
     <Description>A WPF control that wraps the Image control with some filesystem caching</Description>
     <Copyright>MIT © Haridas Pachuveetil  2014 - 2021</Copyright>
     <PackageLicenseUrl>https://github.com/floydpink/CachedImage/blob/main/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/floydpink/CachedImage</PackageProjectUrl>
     <RepositoryUrl>https://github.com/floydpink/CachedImage/blob/main/LICENSE</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>Release</PackageReleaseNotes>
+	<SignAssembly>true</SignAssembly>
+	<AssemblyOriginatorKeyFile>$(USERPROFILE)\.nuget\packages\sdlkeys\2.0.0\tools\Sdl.snk</AssemblyOriginatorKeyFile>
     <UseWPF>true</UseWPF>
+	<AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
     <Reference Include="System.Net.Http" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SDLKeys" Version="2.0.0" />
+    <None Include="$(USERPROFILE)\.nuget\packages\sdlkeys\2.0.0\tools\Sdl.snk">
+      <Link>sdl.snk</Link>
+    </None>  
   </ItemGroup>
 
   <ItemGroup>

@@ -1,17 +1,21 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>$id$</id>
-    <version>$version$</version>
-    <title>$title$</title>
-    <authors>$author$</authors>
-    <owners>$author$</owners>
+    <id>CachedImage</id>
+	<version>1.0.0</version>
+	<authors>floydpink</authors>
+	<owners>SDL</owners>
     <licenseUrl>https://raw.github.com/floydpink/CachedImage/main/LICENSE</licenseUrl>
     <projectUrl>http://floydpink.github.io/CachedImage/</projectUrl>
     <iconUrl>http://floydpink.github.io/CachedImage/images/logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>$description$</description>
+    <description>CachedImage library forked from floydpink's repo and updated by SDL</description>
     <copyright>MIT © Haridas Pachuveetil  2014 - 2021</copyright>
     <tags>WPF Cache Image Control</tags>
   </metadata>
+	<files>
+		<file src=".\bin\Debug\net48\CachedImage.dll" target="lib\net48" />
+		
+		<file src=".\bin\Debug\net6.0-windows\CachedImage.dll" target="lib\net6.0-windows7.0" />
+	</files>
 </package>
